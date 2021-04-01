@@ -1,0 +1,10 @@
+.guitar-container{
+    width: 350px;
+    height: 580px;
+    margin: 10px 5px 5px 5px;
+    border: 1px solid rgba(148, 148, 148, 0.562);
+    padding: 15px 0px 10px 0px;
+    background-color: rgba(250, 235, 215, 0.61);
+    border-radius: 4px;
+    
+}

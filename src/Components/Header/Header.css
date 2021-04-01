@@ -1,0 +1,41 @@
+.Brand-logo{
+    font-size: 2rem;
+    color: rgb(255, 241, 241);
+    font-family:'Courier New', Courier, monospace;
+    font-weight: 600;
+    letter-spacing: 4px;
+    word-spacing: 8px;
+    /* border: 1px solid; */
+    padding:0px 10px 0px 10px;
+    
+}
+.Brand-logo:hover{
+    text-decoration: none;
+    color: antiquewhite;
+}
+.all-nav-items{
+    margin-left:auto;
+}
+.nav-item{
+    padding:5px 10px 5px 10px;
+    color: rgb(255, 255, 255);
+    /* border: 1px solid rgba(0, 0, 0, 0.39); */
+    margin-right:5px;
+    border-radius: 2px;
+    background-color: rgb(0, 94, 62);
+    transition:.2s;
+    font-weight: 600;
+}
+.nav-item:hover{
+    transition:.2s;
+    /* border: 1px solid white; */
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    background-color:rgb(27, 27, 27);
+}
+.nav-design{
+    /* position: fixed; */
+
+    /* width: 100%; */
+    background-color: rgb(4, 78, 53);
+}

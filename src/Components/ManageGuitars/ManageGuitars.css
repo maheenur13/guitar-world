@@ -1,0 +1,8 @@
+.delete-btn-deign:hover{
+    /* border: 1px solid; */
+    border-radius: 20%;
+    background-color: rgba(128, 128, 128, 0.39);
+    cursor: pointer;
+    transition: .4s;
+    padding: 2px;
+}
