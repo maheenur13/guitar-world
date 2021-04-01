@@ -56,12 +56,7 @@ const ManageGuitars = () => {
           </TableRow>
         </TableHead>
         <TableBody>
-            {
-                guitars.length===0 && <div style={{marginLeft:'460px'}}>
-                    <h5>Loading...</h5>
-                     <Spinner  />
-                </div>
-            }
+           
           {guitars.map((guitar) => (
             <TableRow >
               <TableCell component="th" scope="row">
@@ -76,6 +71,12 @@ const ManageGuitars = () => {
         </TableBody>
       </Table>
     </TableContainer>
+    {
+                guitars.length===0 && <div style={{marginLeft:'440px'}}>
+                    <h5>Loading...</h5>
+                     <Spinner  />
+                </div>
+            }
         </div>
     );
 };

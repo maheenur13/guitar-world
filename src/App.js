@@ -13,6 +13,8 @@ import {
   Link
 } from "react-router-dom";
 import Checkout from './Components/Checkout/Checkout'
+import Orders from './Components/Orders/Orders';
+
 export const userContext=createContext();
 function App() {
   const [loggedInUser,setLoggedInUser]=useState([]); 
@@ -27,9 +29,9 @@ function App() {
           <Route path="/home">
           <Home></Home>
           </Route>
-          <Route path="/orders">
-           
-          </Route>
+          <PrivateRoute path="/orders">
+            <Orders></Orders>
+          </PrivateRoute>
           <PrivateRoute path="/admin">
            <Admin/>
           
@@ -41,10 +43,10 @@ function App() {
            <Login></Login>
            
           </Route>
-          <Route path="/checkout">
+          <PrivateRoute path="/checkout/:model/:id">
            <Checkout></Checkout>
            
-          </Route>
+          </PrivateRoute>
           
         </Switch>
       

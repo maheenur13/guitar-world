@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 // import useForm from 'us'
 import { useForm } from "react-hook-form";
 import axios from 'axios';
-
+// import UploadButton from '../UploadButton/UploadButton';
 import './AddGuitarsInfo.css'
 
 const AddGuitarInfo = () => {
@@ -17,8 +17,9 @@ const AddGuitarInfo = () => {
           brandName :data.brandName,
           imageUrl: imageUrl
       }
-      const url=`http://localhost:5059/addEvent`;
       console.log(formEventData);
+      const url=`http://localhost:5059/addEvent`;
+    //   console.log(formEventData);
 
       fetch(url,{
           method: 'POST',
@@ -53,7 +54,7 @@ const handleImageUpload = event=>{
             <form className="guitars-upload-form" onSubmit={handleSubmit(onSubmit)}>
          <div className="form-item-box">
             <label >Guitar Model: </label>
-            <input style={{marginLeft:'8px'}} name="model" placeholder="Model name" ref={register} />
+            <input style={{marginLeft:'8px'}} name="model" placeholder="Model name" ref={register} required/>
             
             <label style={{marginLeft:'8px'}}>Brand: </label>
             <input style={{marginLeft:'8px'}} name="brandName" placeholder="Brand Name" ref={register({ required: true })} />
@@ -63,6 +64,7 @@ const handleImageUpload = event=>{
             <input style={{marginLeft:'8px'}} name="price" placeholder="Price"ref={register({ required: true })} />
             <label style={{marginLeft:'8px'}}>Choose Picture: </label>
             <input  style={{width: '200px',fontSize: '15px',marginLeft:'8px'}} name="file" type="file" onChange={handleImageUpload} ref={register({ required: true })} /> 
+            
         </div>
         <div style={{display: 'flex',justifyContent: 'center',margin:'10px'}}>
         <input style={{padding: '0px 15px 0px 15px'}} type="submit" />

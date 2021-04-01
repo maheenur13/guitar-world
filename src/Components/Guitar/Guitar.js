@@ -1,13 +1,18 @@
 import React from 'react';
-import {
-    BrowserRouter as Router,
-    Link
-  } from "react-router-dom";
 import Button from '@material-ui/core/Button';
 import './Guitar.css';
+import { useHistory } from 'react-router';
+
+
 const Guitar = (props) => {
-    console.log(props.guitar);
-    const { model, brandName, imageUrl, price } = props.guitar
+    // console.log('guitars info',props.guitar);
+    const history = useHistory();
+    const { model, brandName, imageUrl, price,_id } = props.guitar
+        const handleBuyClick=(id)=>{
+            // console.log(id);
+            const url =`/checkout/${model}/${id}`;
+            history.push(url);
+        }
     return (
         <div className="guitar-container">
             
@@ -23,10 +28,10 @@ const Guitar = (props) => {
                 <h3 style={{ color: '#FA1690' }}>
                     ${price}
                 </h3>
-               <Link to="/checkout"> <Button variant="outlined" color="secondary">
+                <Button onClick={()=>handleBuyClick(_id)} variant="outlined" color="secondary">
                     BUY
                 </Button>
-                </Link>
+                
             </div>
         </div>
     );
