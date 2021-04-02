@@ -11,6 +11,8 @@ import './ManageGuitars.css';
 import DeleteIcon from '@material-ui/icons/Delete';
 import EditIcon from '@material-ui/icons/Edit';
 import Spinner from '../Spinner/Spinner';
+import { useHistory } from 'react-router-dom';
+
 const useStyles = makeStyles({
     table: {
       minWidth: 650,
@@ -18,6 +20,7 @@ const useStyles = makeStyles({
   });
 
 const ManageGuitars = () => {
+  const history = useHistory();
     const classes = useStyles();
     const [guitars,setGuitars]= useState([]);
     useEffect(() =>{
@@ -37,7 +40,9 @@ const ManageGuitars = () => {
         .then(result=>{
             console.log('deleted successfully');
             if(result){
-                e.target.parentNode.parentNode.parentNode.style.display='none';
+             history.push('/addguitar');
+             history.push('/manageguitars');
+                console.log(e.target)
             }
         })
     }
@@ -60,7 +65,7 @@ const ManageGuitars = () => {
         <TableBody>
            
           {guitars.map((guitar) => (
-            <TableRow >
+            <TableRow id="tablerow" >
               <TableCell component="th" scope="row">
                 {guitar.model}
               </TableCell>

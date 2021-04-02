@@ -1,12 +1,11 @@
 import React, { useState } from 'react';
-// import useForm from 'us'
 import { useForm } from "react-hook-form";
 import axios from 'axios';
-// import UploadButton from '../UploadButton/UploadButton';
+import { useHistory } from 'react-router-dom';
 import './AddGuitarsInfo.css'
 
 const AddGuitarInfo = () => {
-
+    const history = useHistory();
     const { register, handleSubmit, watch, errors } = useForm();
      const [imageUrl,setImageUrl]=useState(null);
 
@@ -28,7 +27,10 @@ const AddGuitarInfo = () => {
           },
           body: JSON.stringify(formEventData)
       })
-      .then(response =>console.log('server site ',response))
+      .then(response =>{
+          history.push('/manageguitars');
+          history.push('/addguitar');
+      })
     };
 
 const handleImageUpload = event=>{
