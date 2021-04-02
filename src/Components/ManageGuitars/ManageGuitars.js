@@ -39,7 +39,6 @@ const ManageGuitars = () => {
             if(result){
                 e.target.parentNode.parentNode.parentNode.style.display='none';
             }
-            console.log(e.target.parentNode.parentNode.parentNode)
         })
     }
     const editHandler =()=>{

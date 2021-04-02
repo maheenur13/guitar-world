@@ -10,6 +10,7 @@ import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
 import Button from '@material-ui/core/Button';
 import {userContext} from '../../App';
+import {useHistory} from 'react-router-dom';
 
 const useStyles = makeStyles({
     table: {
@@ -17,6 +18,7 @@ const useStyles = makeStyles({
     },
 });
 const Checkout = () => {
+    const history = useHistory();
     const [loggedInUser,setLoggedInUser]=useContext(userContext);
     const { model, id } = useParams();
     const classes = useStyles();
@@ -48,6 +50,7 @@ const Checkout = () => {
         .then(data=>{
             if(data){
                 alert('Order success!');
+                history.push('/home');
             }
         });
         

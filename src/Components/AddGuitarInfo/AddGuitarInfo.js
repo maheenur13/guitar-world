@@ -66,6 +66,7 @@ const handleImageUpload = event=>{
             <input  style={{width: '200px',fontSize: '15px',marginLeft:'8px'}} name="file" type="file" onChange={handleImageUpload} ref={register({ required: true })} /> 
             
         </div>
+        <h6 style={{textAlign:'center',color:'red'}}>Please wait 3/4 seconds for upload the image into Imgbb and then click the submit button!</h6>
         <div style={{display: 'flex',justifyContent: 'center',margin:'10px'}}>
         <input style={{padding: '0px 15px 0px 15px'}} type="submit" />
         </div>
