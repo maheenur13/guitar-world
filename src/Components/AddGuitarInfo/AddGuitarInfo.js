@@ -53,17 +53,24 @@ const handleImageUpload = event=>{
         <div style={{width:'80%',marginLeft:'auto',marginTop:'50px'}}>
             <form className="guitars-upload-form" onSubmit={handleSubmit(onSubmit)}>
          <div className="form-item-box">
-            <label >Guitar Model: </label>
-            <input style={{marginLeft:'8px'}} name="model" placeholder="Model name" ref={register} required/>
-            
-            <label style={{marginLeft:'8px'}}>Brand: </label>
-            <input style={{marginLeft:'8px'}} name="brandName" placeholder="Brand Name" ref={register({ required: true })} />
+             <div className="form-items-inside">
+                <label className="inside-items" style={{margin:'auto'}} >Guitar Model: </label>
+                <input className="inside-items" style={{marginLeft:'8px'}} name="model" placeholder="Model name" ref={register} required/>
+            </div>
+            <div className="form-items-inside">
+            <label className="inside-items" style={{margin:'auto'}}>Brand: </label>
+            <input className="inside-items" style={{marginLeft:'8px'}} name="brandName" placeholder="Brand Name" ref={register({ required: true })} />
+            </div>
         </div>
         <div className="form-item-box">
-           <label>Guitar Price: </label>
-            <input style={{marginLeft:'8px'}} name="price" placeholder="Price"ref={register({ required: true })} />
-            <label style={{marginLeft:'8px'}}>Choose Picture: </label>
-            <input  style={{width: '210px',fontSize: '15px',marginLeft:'8px',border:'1px solid gray'}} name="file" type="file" onChange={handleImageUpload} ref={register({ required: true })} /> 
+            <div className="form-items-inside">
+            <label className="inside-items" style={{margin:'auto'}}>Guitar Price: </label>
+                <input className="inside-items" style={{marginLeft:'8px'}} name="price" placeholder="Price"ref={register({ required: true })} />
+            </div>
+        <div className="form-items-inside">
+                <label className="inside-items" style={{marginLeft:'8px',margin:'auto'}}>Choose Picture: </label>
+                <input className="inside-items"  style={{width: '200px',fontSize: '15px',marginLeft:'8px',border:'1px solid gray'}} name="file" type="file" onChange={handleImageUpload} ref={register({ required: true })} /> 
+            </div>
             
         </div>
         <h6 style={{textAlign:'center',color:'red'}}>Please wait 3/4 seconds for upload the image into Imgbb and then click the submit button!</h6>

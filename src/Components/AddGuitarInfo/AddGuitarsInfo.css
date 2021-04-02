@@ -1,7 +1,6 @@
 .guitars-upload-form{
     border: 1px solid;
     margin-top: 50px;
-    /* margin-left: 150px; */
     padding:55px 0px 25px 0px;
     margin:auto;
     width:60%;
@@ -9,12 +8,65 @@
     background-color:rgb(207, 207, 207);
     
 }
+@media only screen and (max-width:490px) {
+    .guitars-upload-form{
+        width: 80%;
+        margin-left: 50px;
+
+    }
+    
+}
+@media only screen and (max-width:418px) {
+    .guitars-upload-form{
+
+        margin-left: 60px;
+
+    }
+    
+}
+@media only screen and (max-width:370px) {
+    .guitars-upload-form{
+        margin-left: 70px;
+    }
+    
+}
+@media only screen and (max-width:756px) {
+    .form-items-inside{
+        border: 1px solid yellow!important;
+        width: 100%!important;
+        flex-direction: column;
+    }
+    
+}
+@media only screen and (max-width:429px) {
+    .inside-items{
+        width: 80%!important;
+        text-align: center;
+    }
+    
+}
+@media only screen and (max-width:543px) {
+    .inside-items{
+        width: 90%!important;
+        text-align: center;
+    }
+    
+}
 .form-item-box{
     margin: auto;
-    width:70%;
-    /* border: 1px solid red; */
+    width:80%;
     display:flex;
-    /* justify-content:center; */
+    justify-content:center;
     align-items:center;
+    flex-wrap: wrap;
     margin-bottom: 35px;
+}
+.form-items-inside{
+    padding: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.199);
+    width:70%;
+    margin: 5px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
 }

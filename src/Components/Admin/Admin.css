@@ -5,8 +5,9 @@
 }
 .menubar{
     position: fixed;
+    /* border: 1px solid yellow; */
     /* position: sticky; */
-    border: 1px solid;
+    /* border: 2px solid yellow; */
     display: flex;
     flex-direction: column;
     padding: 20px;
@@ -14,6 +15,40 @@
     height: 100vh;
     margin-right: 30px;
     background-color: rgb(4, 78, 53);
+}
+@media only screen and (max-width:1134px) {
+    .menubar{
+        width: 350px;
+    }
+}
+@media only screen and (max-width:989px) {
+    .menubar{
+        width: 250px;
+    }
+}
+@media only screen and (max-width:734px) {
+    .menubar{
+        width: 200px;
+    }
+}
+@media only screen and (max-width:568px) {
+    .menubar{
+        width: 180px;
+    }
+}
+@media only screen and (max-width:505px) {
+    .menubar{
+        width: 130px;
+    }
+}
+@media only screen and (max-width:568px) {
+    .menu-items{
+        /* width: 180px; */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
 }
 .menu-items{
     width: 100%;
