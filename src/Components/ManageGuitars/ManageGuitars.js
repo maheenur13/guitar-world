@@ -21,7 +21,7 @@ const ManageGuitars = () => {
     const classes = useStyles();
     const [guitars,setGuitars]= useState([]);
     useEffect(() =>{
-        const url =`http://localhost:5059/guitars`;
+        const url =`https://cherry-pudding-75552.herokuapp.com/guitars`;
         fetch(url)
         .then(res=>res.json())
         .then(data=>setGuitars(data))
@@ -30,7 +30,7 @@ const ManageGuitars = () => {
 
     const deleteProduct= (id,e) => {
         console.log('iddd',id)
-        fetch(`http://localhost:5059/delete/${id}`,{
+        fetch(`https://cherry-pudding-75552.herokuapp.com/delete/${id}`,{
             method: 'DELETE'
         })
         .then(res=>res.json())

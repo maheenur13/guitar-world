@@ -18,7 +18,7 @@ const AddGuitarInfo = () => {
           imageUrl: imageUrl
       }
       console.log(formEventData);
-      const url=`http://localhost:5059/addEvent`;
+      const url=`https://cherry-pudding-75552.herokuapp.com/addEvent`;
     //   console.log(formEventData);
 
       fetch(url,{
@@ -50,7 +50,7 @@ const handleImageUpload = event=>{
 
 
     return (
-        <div style={{width:'70%',marginLeft:'auto',marginTop:'50px'}}>
+        <div style={{width:'80%',marginLeft:'auto',marginTop:'50px'}}>
             <form className="guitars-upload-form" onSubmit={handleSubmit(onSubmit)}>
          <div className="form-item-box">
             <label >Guitar Model: </label>
@@ -63,7 +63,7 @@ const handleImageUpload = event=>{
            <label>Guitar Price: </label>
             <input style={{marginLeft:'8px'}} name="price" placeholder="Price"ref={register({ required: true })} />
             <label style={{marginLeft:'8px'}}>Choose Picture: </label>
-            <input  style={{width: '200px',fontSize: '15px',marginLeft:'8px'}} name="file" type="file" onChange={handleImageUpload} ref={register({ required: true })} /> 
+            <input  style={{width: '210px',fontSize: '15px',marginLeft:'8px',border:'1px solid gray'}} name="file" type="file" onChange={handleImageUpload} ref={register({ required: true })} /> 
             
         </div>
         <h6 style={{textAlign:'center',color:'red'}}>Please wait 3/4 seconds for upload the image into Imgbb and then click the submit button!</h6>

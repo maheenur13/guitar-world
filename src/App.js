@@ -14,6 +14,7 @@ import {
 } from "react-router-dom";
 import Checkout from './Components/Checkout/Checkout'
 import Orders from './Components/Orders/Orders';
+import Deals from './Components/Deals/Deals';
 
 export const userContext=createContext();
 function App() {
@@ -37,7 +38,7 @@ function App() {
           
           </PrivateRoute>
           <Route path="/deals">
-           
+            <Deals></Deals>
           </Route>
           <Route path="/login">
            <Login></Login>

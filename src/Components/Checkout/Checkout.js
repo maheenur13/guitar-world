@@ -24,22 +24,19 @@ const Checkout = () => {
     const classes = useStyles();
     const [guitars, setGuitars] = useState([]);
     useEffect(() => {
-        const url = `http://localhost:5059/guitars`;
+        const url = `https://cherry-pudding-75552.herokuapp.com/guitars`;
         fetch(url)
             .then(res => res.json())
             .then(data => setGuitars(data))
     }, [id])
     const singleData = guitars.find(guitar => guitar._id === id)
-    // const newSingleData = {...singleData};
-    // newSingleData.date=new Date();
-    //     console.log(newSingleData);
     const handleCheckOut=()=>{
         singleData.buyDate = new Date().toDateString();
         const userOrder ={email:loggedInUser.email,singleData};
         console.log(loggedInUser.email);
         // console.log({items: singleData})
         console.log('checkout cliked')
-        fetch(`http://localhost:5059/addOrder`,{
+        fetch(`https://cherry-pudding-75552.herokuapp.com/addOrder`,{
             method: 'POST',
              headers: {
               'Content-Type': 'application/json'

@@ -5,7 +5,7 @@ import './Home.css';
 const Home = () => {
     const [guitars,setGuitars]= useState([]);
     useEffect(() =>{
-        const url =`http://localhost:5059/guitars`;
+        const url =`https://cherry-pudding-75552.herokuapp.com/guitars`;
         fetch(url)
         .then(res=>res.json())
         .then(data=>setGuitars(data))

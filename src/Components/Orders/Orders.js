@@ -8,7 +8,7 @@ const Orders = () => {
     const [loggedInUser,setLoggedInUser]=useContext(userContext);
     const [items,setItem]= useState([]);
     useEffect(()=>{
-        fetch(`http://localhost:5059/allorder?email=${loggedInUser.email}`)
+        fetch(`https://cherry-pudding-75552.herokuapp.com/allorder?email=${loggedInUser.email}`)
         .then(res=>res.json())
         .then(data=>setItem(data))
     },[])
@@ -18,7 +18,7 @@ const Orders = () => {
     // console.log(email)
     if(items.length>0){
         return (
-            <div>
+            <div >
                 <h3 className="email-design">Your Email : {items[0]?.email}</h3>
                 <hr></hr>
                 <h6 style={{textAlign:'center'}}>Your Ordered Items</h6>

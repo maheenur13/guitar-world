@@ -9,6 +9,11 @@
     padding:0px 10px 0px 10px;
     
 }
+@media only screen and (max-width:395px) {
+    .Brand-logo{
+        font-size: 1rem;
+    }
+}
 .Brand-logo:hover{
     text-decoration: none;
     color: antiquewhite;
@@ -45,11 +50,21 @@
     display:flex;
     justify-content:center;
     align-items: center;
-    margin-left:65%;
+    /* margin-left:65%; */
     margin-top: 9px;
     background-color:rgb(59, 59, 59);
     padding:8px;
     border: 1px solid white;
     border-radius: 3px;
-    /* border:1px solid red; */
+    border:1px solid red;
 }
+/* @media only screen and (max-width: 1889px) {
+    .active-user{
+        margin-left:50%;
+    }
+  }
+  @media only screen and (max-width: 1699px) {
+    .active-user{
+        margin-left:50%;
+    }
+  } */
