@@ -39,3 +39,17 @@
     /* width: 100%; */
     background-color: rgb(4, 78, 53);
 }
+.active-user{
+    font-size:12px;
+    color:white;
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    margin-left:65%;
+    margin-top: 9px;
+    background-color:rgb(59, 59, 59);
+    padding:8px;
+    border: 1px solid white;
+    border-radius: 3px;
+    /* border:1px solid red; */
+}

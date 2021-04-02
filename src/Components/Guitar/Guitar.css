@@ -1,10 +1,26 @@
 .guitar-container{
-    width: 350px;
-    height: 580px;
+    width: 300px;
+    height: 420px;
     margin: 10px 5px 5px 5px;
     border: 1px solid rgba(148, 148, 148, 0.562);
     padding: 15px 0px 10px 0px;
-    background-color: rgba(250, 235, 215, 0.61);
+    background-color: rgba(255, 233, 215, 0.61);
     border-radius: 4px;
     
+}
+.first-box{
+    height:80%;
+    margin: 10px;
+}
+.second-box{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:0px 5px 0px 10px;
+    margin: 15px 6px 15px 6px;
+    border: 1px solid pink;
+    border-radius: 4px;
+    /* padding: 5px 0px 5px 0px;  */
+    background-color: pink; 
+     height:12%;
 }

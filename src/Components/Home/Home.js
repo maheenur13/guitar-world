@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Guitar from '../Guitar/Guitar';
 import Spinner from '../Spinner/Spinner';
+import './Home.css';
 const Home = () => {
     const [guitars,setGuitars]= useState([]);
     useEffect(() =>{
@@ -20,7 +21,7 @@ const Home = () => {
         <div style={guitarContainerDesign}>
             {
                 guitars.length===0 && <div style={{display:'flex',justifyContent:'center',alignItems:'center',flexDirection:'column'}}>
-                    <h3>Data is Loading Please Wait...</h3>
+                    <h3 className="text-blink">Data is Loading Please Wait...</h3>
                     <Spinner/>
                 </div>
             }

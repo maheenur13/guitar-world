@@ -38,6 +38,9 @@ const Admin = () => {
                     <PrivateRoute path="/manageguitars">
                         <ManageGuitars></ManageGuitars>
                     </PrivateRoute>
+                    <PrivateRoute path="/editguitar">
+                        <h4 className="edit-guitar-text" >Coming Soon...</h4>
+                    </PrivateRoute>
                     
                 </Switch>
 

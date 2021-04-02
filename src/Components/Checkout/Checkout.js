@@ -28,19 +28,28 @@ const Checkout = () => {
             .then(data => setGuitars(data))
     }, [id])
     const singleData = guitars.find(guitar => guitar._id === id)
-    
+    // const newSingleData = {...singleData};
+    // newSingleData.date=new Date();
+    //     console.log(newSingleData);
     const handleCheckOut=()=>{
-        const newUser ={...loggedInUser,...singleData};
-        console.log(newUser)
+        singleData.buyDate = new Date().toDateString();
+        const userOrder ={email:loggedInUser.email,singleData};
+        console.log(loggedInUser.email);
+        // console.log({items: singleData})
         console.log('checkout cliked')
-        fetch(`http://localhost:5059/singleuser`,{
+        fetch(`http://localhost:5059/addOrder`,{
             method: 'POST',
              headers: {
               'Content-Type': 'application/json'
           },
-            body: JSON.stringify(newUser)
+            body: JSON.stringify(userOrder),
         })
-        .then(response =>console.log('server site ',response));
+        .then(res =>res.json())
+        .then(data=>{
+            if(data){
+                alert('Order success!');
+            }
+        });
         
     };
     // const {price,brandName} = singleData;

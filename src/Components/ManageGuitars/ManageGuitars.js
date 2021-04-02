@@ -42,6 +42,9 @@ const ManageGuitars = () => {
             console.log(e.target.parentNode.parentNode.parentNode)
         })
     }
+    const editHandler =()=>{
+      alert('coming soon...');
+    }
     return (
         <div style={{marginRight:'180px',marginTop:'40px'}} className="container">
             <TableContainer component={Paper}>
@@ -64,7 +67,7 @@ const ManageGuitars = () => {
               </TableCell>
               <TableCell align="right">{guitar.brandName}</TableCell>
               <TableCell align="right">{guitar.price}$</TableCell>
-              <TableCell align="right"><EditIcon className="delete-btn-deign"  /> <DeleteIcon className="delete-btn-deign" onClick={(e)=>deleteProduct(guitar._id,e)}/></TableCell>
+              <TableCell align="right"><EditIcon className="delete-btn-deign" onClick={()=>editHandler()}  /> <DeleteIcon className="delete-btn-deign" onClick={(e)=>deleteProduct(guitar._id,e)}/></TableCell>
               
             </TableRow>
           ))}
